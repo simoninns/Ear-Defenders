@@ -38,17 +38,17 @@ if (output == "All") {
     rotate([0,-90,0]) {
         move([0,0,45]) {
             // Ear cup left
-            render_ear_shell(0, 0, 0, 0, 15);
-            render_t_mount(0, 0, 0, 0, 15);
-            render_ear_muff(0, 0, 0, 0, 15);
+            render_ear_shell(0, 0, 0, 0, 30);
+            render_t_mount(0, 0, 0, 0, 30);
+            render_ear_muff(0, 0, 0, 0, 30);
 
             // Ear cup right
-            render_ear_shell(0, 0, -90, 180, 15);
-            render_t_mount(0, 0, -90, 180, 15);
-            render_ear_muff(0, 0, -90, 180, 15);
+            render_ear_shell(0, 0, -75, 180, 30);
+            render_t_mount(0, 0, -75, 180, 30);
+            render_ear_muff(0, 0, -75, 180, 30);
 
             // Headband
-            render_headband(0,0,0,15);
+            render_headband(0,0,0,30);
         }
     }
 }
@@ -70,5 +70,5 @@ if (output == "Ear Muff") {
 
 // Display headband
 if (output == "Headband") {
-    rotate([90,0,0]) render_headband(-30,12.5,50,15);
+    rotate([90,0,0]) render_headband(-30,12.5,50,30);
 }

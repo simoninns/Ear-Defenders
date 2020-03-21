@@ -42,55 +42,55 @@ module render_headband(x, y, z, rotang)
             move([0,0,-3]) {
                 // Left slotted holder
                 difference() {
-                    move([0, 0, 34.5]) cuboid([80,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
+                    move([0, 0, 31.5]) cuboid([80,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
 
                     // Cut slot for the T-piece
-                    move([-7, 0, 34.5]) slot(l=50, r1=3.5, r2=3.5, h=hb_thick + 1);
+                    move([-7, 0, 31.5]) slot(l=50, r1=3.5, r2=3.5, h=hb_thick + 1);
                 }
 
                 // Left small arc
-                rotate([90,-25,0]) {
-                    move([30,-31,0]) {
-                        rotate_extrude(angle = 66) translate([50, 0, 0]) square(size = [hb_thick, hb_width], center = true);
+                rotate([-90,-90,0]) {
+                    move([-18.5,40,0]) {
+                        rotate_extrude(angle = 75) translate([50, 0, 0]) square(size = [hb_thick, hb_width], center = true);
                     }
                 }
 
                 // Left strengthener
                 rotate([90,0,0]) {
-                    move([85,7,0]) cyl(h=hb_width, d=10, chamfer=0.5);
+                    move([89,-8,0]) cyl(h=hb_width, d=10, chamfer=0.5);
                 }
             }
         }
 
         rotate([0,rotang,0]) {
-            move([26,0,-83.5]) rotate([180,0,0]) {
+            move([38,0,-62]) rotate([180,0,0]) {
                 // Right slotted holder
                 difference() {
-                    move([0, 0, 34.5]) cuboid([80,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
+                    move([0, 0, 31.5]) cuboid([80,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
 
                     // Cut slot for the T-piece
-                    move([-7, 0, 34.5]) slot(l=50, r1=3.5, r2=3.5, h=hb_thick+1);
+                    move([-7, 0, 31.5]) slot(l=50, r1=3.5, r2=3.5, h=hb_thick+1);
                 }
 
                 // Right small arc
-                rotate([90,-25,0]) {
-                    move([30,-31,0]) {
-                        rotate_extrude(angle = 66) translate([50, 0, 0]) square(size = [hb_thick, hb_width], center = true);
+                rotate([-90,-90,0]) {
+                    move([-18.5,40,0]) {
+                        rotate_extrude(angle = 75) translate([50, 0, 0]) square(size = [hb_thick, hb_width], center = true);
                     }
                 }
 
                 // Right strengthener
                 rotate([90,0,0]) {
-                    move([85,7,0]) cyl(h=hb_width, d=10, chamfer=0.5);
+                    move([89,-8,0]) cyl(h=hb_width, d=10, chamfer=0.5);
                 }
             }
         }
 
         // Upper
         rotate([90,90,0]) {
-            move([46,44,0]) {
+            move([38,38,0]) {
                 // 76.5
-                rotate([0,0,30]) rotate_extrude(angle = 122) translate([80.5, 0, 0]) square(size = [hb_thick + 2, hb_width], center = true);
+                rotate([0,0,30]) rotate_extrude(angle = 120) translate([86, 0, 0]) square(size = [hb_thick + 2, hb_width], center = true);
             }
         }
     }
