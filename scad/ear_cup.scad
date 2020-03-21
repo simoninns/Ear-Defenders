@@ -110,7 +110,7 @@ module t_mount(x, y, z)
     length = 16;
     color("darkred") move([x,y,z]) {
         move([0,0,0]) cyl(l = length, d = 6.8, center = false, chamfer=0.5);
-        move([-3.5,-6.5,length -1]) cuboid([7,13,3], chamfer=0.5, center = false);
+        move([-3.5,-10,length -1]) cuboid([7,20,3], chamfer=0.5, center = false);
     }
 }
 
