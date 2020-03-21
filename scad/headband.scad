@@ -90,7 +90,7 @@ module render_headband(x, y, z, rotang)
         rotate([90,90,0]) {
             move([46,44,0]) {
                 // 76.5
-                rotate([0,0,30]) rotate_extrude(angle = 122) translate([80.5, 0, 0]) square(size = [hb_thick, hb_width], center = true);
+                rotate([0,0,30]) rotate_extrude(angle = 122) translate([80.5, 0, 0]) square(size = [hb_thick + 2, hb_width], center = true);
             }
         }
     }
