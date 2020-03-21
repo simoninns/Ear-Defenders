@@ -8,13 +8,15 @@ All parts are suitable for printing with PETG except the ear-muffs (the bits tha
 
 It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation. 
 
+![Ear Defenders](/images/ear_defenders1_small.png)
+
 # Printing instructions
 
 ## Overview
 
 The model has been printed and tested on the Prusa MK3S/MMU2S printer.  The headband requires a 20x25cm printing bed.
 
-The OpenSCAD source files provide a parameter interface that allows you to render either the whole model or the individual parts (placed flat on the axis read for STL (or other 3D format) export).
+The OpenSCAD source files provide a parameter interface that allows you to render either the whole model or the individual parts (placed flat on the axis read for STL (or other 3D format) export).  This requires OpenSCAD 2019.05 or later.
 
 ## Recommended print settings
 ### Ear shell
@@ -23,23 +25,30 @@ The OpenSCAD source files provide a parameter interface that allows you to rende
 * Infill: 15%
 * Supports: None
 
+The ear shell should be stuffed with acoustic foam (although just about any soft foam or other material will do).  Simply cut some foam with scissors and push into the ear cups after the ear-muffs have been clipped in place. 
+
 ### T-Mount
+* Number required: 2
 * Material: Prusament PETG (Jet Black)
 * Layer: 0.20mm (Quality)
 * Infill: 25%
 * Supports: None
 
 ### Headband
+* Number required: 1
 * Material: Prusament PETG (Jet Black)
 * Layer: 0.20mm (Quality)
 * Infill: 25%
 * Supports: Everywhere
 
 ### Ear muff
+* Number required: 2
 * Material: Fillamentum Flexfill 98A (Traffic Black)
 * Layer: 0.20mm (Quality)
 * Infill: 5%
 * Supports: None
+
+If you don't have TPU filament available it's possible to print this part in PETG too, only it won't be quite as comfortable (but it still works to isolate your ears).
 
 # Author
 
@@ -47,7 +56,7 @@ The 3D printable ear-defenders are designed and maintained by Simon Inns.
 
 # Licensing
 
-## OpenSCAD source files software license (GPLv3)
+## OpenSCAD source files - software license (GPLv3)
 
     This is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -62,7 +71,7 @@ The 3D printable ear-defenders are designed and maintained by Simon Inns.
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-## 3D model file license (Creative Commons BY-SA 4.0)
+## 3D model file - Creative Commons license (Creative Commons BY-SA 4.0)
 
 Please see the following link for details: https://creativecommons.org/licenses/by-sa/4.0/
 
