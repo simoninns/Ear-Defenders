@@ -8,24 +8,26 @@ All parts are suitable for printing with PETG except the ear-muffs (the bits tha
 
 It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation. 
 
-![Ear Defenders](/images/ear_defenders1_small.png)
+<img src="/images/ear_defenders1.png" width="800">
 
 # Printing instructions
 
 ## Overview
 
-The model has been printed and tested on the Prusa MK3S/MMU2S printer.  The headband requires a 20x25cm printing bed.
+The model has been printed and tested on the Prusa MK3S/MMU2S printer. All parts are symmetrical, so the same part is printed twice for each ear (except the headband of course).  All parts fit on a 20x20 printing bed.
 
 The OpenSCAD source files provide a parameter interface that allows you to render either the whole model or the individual parts (placed flat on the axis read for STL (or other 3D format) export).  This requires OpenSCAD 2019.05 or later.
 
 ## Recommended print settings
 ### Ear shell
+* Number required: 2
 * Material: Prusament PETG (Prusa Orange)
 * Layer: 0.20mm (Quality)
 * Infill: 15%
 * Supports: None
+* Notes: The ear shell should be stuffed with acoustic foam (although just about any soft foam or other material will do).  Simply cut some foam with scissors and push into the ear cups after the ear-muffs have been clipped in place. 
 
-The ear shell should be stuffed with acoustic foam (although just about any soft foam or other material will do).  Simply cut some foam with scissors and push into the ear cups after the ear-muffs have been clipped in place. 
+<img src="/images/ear_shell.png" width="800">
 
 ### T-Mount
 * Number required: 2
@@ -33,6 +35,9 @@ The ear shell should be stuffed with acoustic foam (although just about any soft
 * Layer: 0.20mm (Quality)
 * Infill: 25%
 * Supports: None
+* Notes: The T-Mounts are a little smaller in diameter than the hole in the ear shell so should press in firmly (don't use too much force though... Read on...).  If they are loose, use a little glue on the tip of the mount and stick in place (you can remove the ear shell from the headband by simply twisting through 90 degrees).  If the fit is tight, use an 8mm drill bit (just hold it in your hand) and insert into the ear shell hole and twist round and up and down to clear out any unnecessary filament.
+
+<img src="/images/t_mount.png" width="800">
 
 ### Headband
 * Number required: 1
@@ -41,14 +46,17 @@ The ear shell should be stuffed with acoustic foam (although just about any soft
 * Infill: 25%
 * Supports: Everywhere
 
+<img src="/images/headband.png" width="800">
+
 ### Ear muff
 * Number required: 2
 * Material: Fillamentum Flexfill 98A (Traffic Black)
 * Layer: 0.20mm (Quality)
-* Infill: 5%
+* Infill: 5% (to make them soft)
 * Supports: None
+* Notes: If you don't have TPU filament available it's possible to print this part in PETG too, only it won't be quite as comfortable (but it still works to isolate your ears); just make sure to increase the infill for other materials.  The ear muffs are designed to clip into the ear cups using the four small clips around the ear-cup (they are designed to be removed easily in case you wish to clean them).
 
-If you don't have TPU filament available it's possible to print this part in PETG too, only it won't be quite as comfortable (but it still works to isolate your ears).
+<img src="/images/ear_muff.png" width="800">
 
 # Author
 

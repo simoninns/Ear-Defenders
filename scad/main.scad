@@ -43,9 +43,9 @@ if (output == "All") {
             render_ear_muff(0, 0, 0, 0, 15);
 
             // Ear cup right
-            render_ear_shell(0, 0, -100, 180, 15);
-            render_t_mount(0, 0, -100, 180, 15);
-            render_ear_muff(0, 0, -100, 180, 15);
+            render_ear_shell(0, 0, -90, 180, 15);
+            render_t_mount(0, 0, -90, 180, 15);
+            render_ear_muff(0, 0, -90, 180, 15);
 
             // Headband
             render_headband(0,0,0,15);
