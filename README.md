@@ -1,12 +1,12 @@
 # Overview
 
-Working from home seems like a great idea when it’s by choice, but during these strange times of social distancing and self-isolation it can be hard to focus and get things done with the kids screaming and running around, teenager blaring music and video games as well as the general background noise of life in a busy house.
+Working from home seems like a great idea when it’s by choice, but during these strange times of social distancing and self-isolation it can be hard to focus and get things done with the kids screaming and running around, teenagers blaring music and video games as well as the general background noise of life in a busy house.
 
-Fear not, even if you can’t go to the hardware store, you can now 3D print your very own set of attractive ear defenders!  These handy head-mounted devices recreate the warm, calm, happy space of a quiet office allowing you to focus and get those TPS report done on time.
+Fear not, even if you can’t go to the hardware store, you can now 3D print your very own set of attractive ear defenders!  These handy head-mounted devices recreate the warm, calm, happy space of a quiet office allowing you to focus and get those TPS reports done on time.
 
 All parts are suitable for printing with PETG except the ear-muffs (the bits that sit around the ear) which should be printed in TPU to ensure a soft, silky caress to the sides of your head.
 
-It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your computer or read a book in happy isolation. 
+It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation. 
 
 # Printing instructions
 
