@@ -32,7 +32,7 @@ use <BOSL/beziers.scad>
 module side_part()
 {
     hb_width = 20;
-    hb_thick = 3;
+    hb_thick = 5;
 
     move([0,0,0]) {
         // Left
@@ -53,12 +53,12 @@ module side_part()
 
         // Middle
         rotate([90,0,0]) {
-            move([75,10,0]) cyl(h=hb_width, d=6, chamfer=0.5);
+            move([75,10,0]) cyl(h=hb_width, d=8, chamfer=0.5);
         }
 
         // Bottom
         rotate([90,0,0]) {
-            move([45,31,0]) cyl(h=hb_width, d=6, chamfer=0.5);
+            move([45,31,0]) cyl(h=hb_width, d=8, chamfer=0.5);
         }
     }
 }
@@ -66,7 +66,7 @@ module side_part()
 module render_headband(x, y, z, rotang)
 {
     hb_width = 20;
-    hb_thick = 3;
+    hb_thick = 5;
 
     color("MediumBlue") move([x - 12, y, z]) {
         move([0,0,0]) rotate([0,-rotang,0]) {
@@ -81,7 +81,7 @@ module render_headband(x, y, z, rotang)
         $fn=30;
         rotate([90,90,0]) {
             move([37.5,56,0]) {
-                rotate([0,0,10]) rotate_extrude(angle = 160) translate([70, 0, 0]) square(size = [hb_thick + 1, hb_width], center = true);
+                rotate([0,0,10]) rotate_extrude(angle = 160) translate([70, 0, 0]) square(size = [hb_thick, hb_width], center = true);
             }
         }
     }

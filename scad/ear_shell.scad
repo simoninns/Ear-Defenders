@@ -32,7 +32,7 @@ module ec_shell(x, y, z)
 {
     ncp1 = 0.01;
     ncp2 = 0.02;
-    wall = 2;
+    wall = 4;
     roundrad = 10;
 
     color("darkOrange") move([x,y,z]) {
@@ -45,32 +45,21 @@ module ec_shell(x, y, z)
             }
 
             // Hollow out the ear cup shell
-            move([0,0,0 - ncp1]) rounded_prismoid(size1=[110 -  wall,80 - wall], size2=[110 -  wall,80 - wall], h=7 + ncp2, r=roundrad, center=false); // Top
-            move([0,0,7 - ncp1]) rounded_prismoid(size1=[110 -  wall,80 - wall], size2=[90 -   wall,70 -  wall], h=14 + ncp2, shift=[1,0], r=roundrad); // Middle
-            move([1,0,21 - ncp1]) rounded_prismoid(size1=[90 -  wall,70 - wall], size2=[60 -   wall,50 -  wall], h=12 + ncp2 - 2, shift=[0,0], r=roundrad); // Bottom
+            move([0,0,0 - ncp1]) rounded_prismoid(size1=[110 -  (wall * 2),80 - (wall * 2)], size2=[110 -  (wall * 2),80 - (wall * 2)], h=7 + ncp2, r=roundrad, center=false); // Top
+            move([0,0,7 - ncp1]) rounded_prismoid(size1=[110 -  (wall * 2),80 - (wall * 2)], size2=[90 -   (wall * 2),70 -  (wall * 2)], h=14 + ncp2, shift=[1,0], r=roundrad); // Middle
+            move([1,0,21 - ncp1]) rounded_prismoid(size1=[90 -  (wall * 2),70 - (wall * 2)], size2=[60 -   (wall * 2),50 -  (wall * 2)], h=12 + ncp2 - 2, shift=[0,0], r=roundrad); // Bottom
+
+            // Cavity for ear muff
+            move([0,0,0 - ncp1]) rounded_prismoid(size1=[110 -  2,80 - 2], size2=[110 -  2,80 - 2], h=2 + ncp2, r=roundrad, center=false); // Top
 
             // Hole for head band mount
-            move([-5,0,21]) cyl(l = 12, d = 7, center=false);
+            move([1,-3,30]) cuboid([8,6, wall + 2], center=false);
         }
 
         difference() {
             // Mounting hole for head band mounting post
-            move([-5,0,21 - 2]) cyl(l = 12, d = 7 + wall, center=false);
-
-            move([-5,0,21]) cyl(l = 12, d = 7, center=false);
-        }
-
-        // Lip for TPU ear shell
-        lip_width = 8;
-        lip_offset = 3;
-        difference() {
-            union() {
-                move([0,0,lip_offset]) rounded_prismoid(size1=[110 - wall,80 - wall], size2=[110 - wall,80 - wall], h=4, r=roundrad, center=false);
-                move([0,0,lip_offset - 1]) rounded_prismoid(size1=[110 - wall,80 - wall], size2=[110 - wall,80 - wall], h=1, r=roundrad, center=false);
-            }
-
-            move([0,0,lip_offset - ncp1]) rounded_prismoid(size1=[110 - lip_width - wall,80 - lip_width - wall], size2=[110 - wall,80 - wall], h=4 + ncp2, r=roundrad, center=false);
-            move([0,0,lip_offset - 1 - ncp1]) rounded_prismoid(size1=[110 - lip_width - wall,80 - lip_width - wall], size2=[110 - lip_width - wall,80 - lip_width - wall], h=1 + ncp2, r=roundrad, center=false);
+            move([0,-4,21 - 2]) cuboid([10,8,12], center=false);
+            move([1,-3,21]) cuboid([8,6,12], center=false);
         }
 
         // Lips to hold TPU ear shell in place

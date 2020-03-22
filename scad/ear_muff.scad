@@ -39,7 +39,7 @@ module ear_muff(x, y, z)
     ncp2 = 0.02;
     cup_offset = 3;
     roundrad = 10;
-    height = 15;
+    height = 12;
 
     color("DimGray") move([x,y,z]) {
         difference() {
@@ -50,7 +50,7 @@ module ear_muff(x, y, z)
             }
 
             // Remove the material from the centre
-            move([0,0,-height]) rounded_prismoid(size1=[110 - cup_offset - 5 - 24,80 - cup_offset - 5 - 24], size2=[110 - cup_offset - 10 - 25,80 - cup_offset - 10 - 25], h=3 + ncp1, r=roundrad + 5, center=false);
+            move([0,0,-height]) rounded_prismoid(size1=[110 - cup_offset - 0 - 24,80 - cup_offset - 0 - 24], size2=[110 - cup_offset - 10 - 25,80 - cup_offset - 10 - 25], h=5 + ncp1, r=roundrad + 5, center=false);
 
             move([0,0,-(height - 3)]) rounded_prismoid(size1=[110 - cup_offset - 5 - 30,80 - cup_offset - 5 - 30], size2=[110 - cup_offset - 10 - 25,80 - cup_offset - 10 - 25], h=height - 1, r=roundrad + 5, center=false);
         }

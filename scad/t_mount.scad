@@ -31,23 +31,49 @@ use <BOSL/transforms.scad>
 // Render the T-shaped mount
 module t_mount(x, y, z)
 {
-    band_thickness = 3;
+    // band is 20mm by 5mm
     color("darkred") move([x,y,z]) {
-        move([0,0,0]) cyl(l = 13.5, d = 6.8, center = false, chamfer=0.5);
+        move([-5, -3,0]) cuboid([8,6, 14], center = false, chamfer=0.5);
 
         difference() {
-            move([-3.5,-13,12.5]) cuboid([7,26,2 + 3 + 3], chamfer=0.5, center = false);
+            move([-5,-15,13]) cuboid([8,30,12], chamfer=0.5, center = false);
 
-            move([-4,-10.25,15]) cuboid([8,20.5,3], center = false);
+            move([-6,-12.5,15]) cuboid([12,25,12], center = false);
+
+            rotate([-90,0,0]) move([-1,-21,-16]) cyl(l=32, r=2, center=false);
         }
+
+        
     }
 }
 
-module render_t_mount(x, y, z, rotang, tilt)
+module t_mount_clip(x, y, z)
+{
+    color("green") move([x,y,z]) {
+        difference() {
+            move([-5,-12.25,17]) cuboid([8,24.5,8], chamfer=0.5, center = false);
+
+            move([-6,-10, 18.5]) cuboid([10,20,5], center = false);
+        }
+
+        rotate([-90,0,0]) move([-1,-21,-14]) cyl(l=3, r=2, center=false, chamfer=0.7);
+        rotate([-90,0,0]) move([-1,-21,+11]) cyl(l=3, r=2, center=false, chamfer=0.7);
+    }
+}
+
+module render_t_mount(x, y, z, rotang, tilt, printpos)
 {
     move([x, y, z]) {
         rotate([0,rotang - tilt,rotang]) {
-            t_mount(-5, 0, 21);
+            if (!printpos) {
+                // Layout for display
+                t_mount(-5, 0, 21);
+                t_mount_clip(-5, 0, 21);
+            } else {
+                // Layout for printing
+                t_mount(-5, 0, 21);
+                t_mount_clip(-5, 0, 30);
+            }
         }
     }
 }

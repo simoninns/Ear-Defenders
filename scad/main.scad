@@ -40,14 +40,14 @@ if (output == "All") {
     rotate([0,-90,0]) {
         move([0,0,45]) {
             // Ear cup left
-            render_ear_shell(0, 0, 0, 0, 30);
-            render_t_mount(0, 0, 0, 0, 30);
-            render_ear_muff(0, 0, 0, 0, 30);
+            render_ear_shell(0, 0, -5, 0, 30);
+            render_t_mount(9.5, 0, 0.5, 0, 30, false);
+            render_ear_muff(0, 0, -5, 0, 30);
 
             // Ear cup right
-            render_ear_shell(0, 0, -75, 180, 30);
-            render_t_mount(0, 0, -75, 180, 30);
-            render_ear_muff(0, 0, -75, 180, 30);
+            render_ear_shell(0, 0, -70, 180, 30);
+            render_t_mount(9.5, 0, -75.5, 180, 30, false);
+            render_ear_muff(0, 0, -70, 180, 30);
 
             // Headband
             render_headband(0,0,0,30);
@@ -62,7 +62,7 @@ if (output == "Ear Shell") {
 
 // Display T-Mount
 if (output == "T-Mount") {
-    render_t_mount(-35, 0, -1.5, 0, -90);
+    render_t_mount(-35, 0, -1.5, 0, -90, true);
 }
 
 // Display Ear Muff
