@@ -52,7 +52,7 @@ The OpenSCAD source files provide a parameter interface that allows you to rende
 * Number required: 2
 * Material: Fillamentum Flexfill 98A (Traffic Black)
 * Layer: 0.20mm (Quality)
-* Infill: 5% (to make them soft)
+* Infill: 7% (set to rectilinear)
 * Supports: None
 * Notes: If you don't have TPU filament available it's possible to print this part in PETG too, only it won't be quite as comfortable (but it still works to isolate your ears); just make sure to increase the infill for other materials.  The ear muffs are designed to clip into the ear cups using the four small clips around the ear-cup (they are designed to be removed easily in case you wish to clean them).
 
