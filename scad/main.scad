@@ -24,7 +24,9 @@
     
 ************************************************************************/
 
-include <ear_cup.scad>
+include <ear_shell.scad>
+include <ear_muff.scad>
+include <t_mount.scad>
 include <headband.scad>
 
 // Rendering quality
@@ -60,7 +62,7 @@ if (output == "Ear Shell") {
 
 // Display T-Mount
 if (output == "T-Mount") {
-    render_t_mount(-5, 0, 39, 0, 180);
+    render_t_mount(-35, 0, -1.5, 0, -90);
 }
 
 // Display Ear Muff
@@ -70,5 +72,5 @@ if (output == "Ear Muff") {
 
 // Display headband
 if (output == "Headband") {
-    rotate([90,0,0]) render_headband(-30,12.5,50,30);
+    rotate([90,0,0]) render_headband(-30,10,50,30);
 }

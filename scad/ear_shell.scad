@@ -1,6 +1,6 @@
 /************************************************************************
 
-	ear_cup.scad
+	ear_shell.scad
     
 	Ear Defenders - Open hardware ear defense
     Copyright (C) 2020 Simon Inns
@@ -104,68 +104,11 @@ module ec_shell(x, y, z)
     }
 }
 
-// Render the T-shaped mount
-module t_mount(x, y, z)
-{
-    length = 16;
-    color("darkred") move([x,y,z]) {
-        move([0,0,0]) cyl(l = length, d = 6.8, center = false, chamfer=0.5);
-        move([-3.5,-10,length -1]) cuboid([7,20,3], chamfer=0.5, center = false);
-    }
-}
-
-// Render the TPU ear-muff
-//
-// This is a manifold shape, so it needs to be printed with a
-// very low infill and low number of perimeters to make it as soft
-// as possible
-module ear_muff(x, y, z)
-{
-    ncp1 = 0.01;
-    ncp2 = 0.02;
-    cup_offset = 3;
-    roundrad = 10;
-    height = 15;
-
-    color("DimGray") move([x,y,z]) {
-        difference() {
-            union() {
-                move([0,0,0]) rounded_prismoid(size1=[110 - cup_offset,80 - cup_offset], size2=[110 - cup_offset,80 - cup_offset], h=1, r=roundrad, center=false); // Bottom
-                move([0,0,-(height - 3)]) rounded_prismoid(size1=[110 - cup_offset - 5,80 - cup_offset - 5], size2=[110 - cup_offset - 5,80 - cup_offset - 5], h=height - 3, r=roundrad + 5, center=false); // Middle
-                move([0,0,-(height - 1)]) rounded_prismoid(size1=[110 - cup_offset - 10,80 - cup_offset - 10], size2=[110 - cup_offset - 5,80 - cup_offset - 5], h=2, r=roundrad + 5, center=false); // Top
-            }
-
-            // Remove the material from the centre
-            move([0,0,-height]) rounded_prismoid(size1=[110 - cup_offset - 5 - 24,80 - cup_offset - 5 - 24], size2=[110 - cup_offset - 10 - 25,80 - cup_offset - 10 - 25], h=3 + ncp1, r=roundrad + 5, center=false);
-
-            move([0,0,-(height - 3)]) rounded_prismoid(size1=[110 - cup_offset - 5 - 30,80 - cup_offset - 5 - 30], size2=[110 - cup_offset - 10 - 25,80 - cup_offset - 10 - 25], h=height - 1, r=roundrad + 5, center=false);
-        }
-    }
-}
-
 module render_ear_shell(x, y, z, rotang, tilt)
 {
     move([x, y, z]) {
         rotate([0,rotang - tilt,rotang]) {
             ec_shell(0, 0, 0);
-        }
-    }
-}
-
-module render_t_mount(x, y, z, rotang, tilt)
-{
-    move([x, y, z]) {
-        rotate([0,rotang - tilt,rotang]) {
-            t_mount(-5, 0, 21);
-        }
-    }
-}
-
-module render_ear_muff(x, y, z, rotang, tilt)
-{
-    move([x, y, z]) {
-        rotate([0,rotang - tilt,rotang]) {
-            ear_muff(0, 0, 1);
         }
     }
 }

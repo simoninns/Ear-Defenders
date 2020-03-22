@@ -29,68 +29,59 @@ use <BOSL/shapes.scad>
 use <BOSL/transforms.scad>
 use <BOSL/beziers.scad>
 
-module render_headband(x, y, z, rotang)
+module side_part()
 {
-    ncp1 = 0.01;
-    ncp2 = 0.02;
-
     hb_width = 20;
-    hb_thick = 3.1; // 3.1 to make the fit between the T-mount tighter
+    hb_thick = 3;
 
-    color("MediumBlue") move([x - 12, y, z]) {
-        rotate([0,-rotang,0]) {
-            move([0,0,-3]) {
-                // Left slotted holder
-                difference() {
-                    move([0, 0, 31.5]) cuboid([80,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
+    move([0,0,0]) {
+        // Left
+        move([0, 0, 31.5]) cuboid([90,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
 
-                    // Cut slot for the T-piece
-                    move([-7, 0, 31.5]) slot(l=50, r1=3.5, r2=3.5, h=hb_thick + 1);
-                }
-
-                // Left small arc
-                rotate([-90,-90,0]) {
-                    move([-18.5,40,0]) {
-                        rotate_extrude(angle = 75) translate([50, 0, 0]) square(size = [hb_thick, hb_width], center = true);
-                    }
-                }
-
-                // Left strengthener
-                rotate([90,0,0]) {
-                    move([89,-8,0]) cyl(h=hb_width, d=10, chamfer=0.5);
-                }
-            }
+        rotate([0,35,0]) {
+            move([37, 0, 51.5]) cuboid([38,hb_width,hb_thick]);
         }
 
-        rotate([0,rotang,0]) {
-            move([38,0,-62]) rotate([180,0,0]) {
-                // Right slotted holder
-                difference() {
-                    move([0, 0, 31.5]) cuboid([80,hb_width,hb_thick], trimcorners=false, chamfer=1, edges=EDGE_FR_LF+EDGE_BK_LF);
+        rotate([0,90,0]) {
+            move([-1.3, 0, 74.8]) cuboid([20,hb_width,hb_thick]);
+        }
 
-                    // Cut slot for the T-piece
-                    move([-7, 0, 31.5]) slot(l=50, r1=3.5, r2=3.5, h=hb_thick+1);
-                }
+        // Top
+        rotate([90,0,0]) {
+            move([76,-7,0]) cyl(h=hb_width, d=10, chamfer=0.5);
+        }
 
-                // Right small arc
-                rotate([-90,-90,0]) {
-                    move([-18.5,40,0]) {
-                        rotate_extrude(angle = 75) translate([50, 0, 0]) square(size = [hb_thick, hb_width], center = true);
-                    }
-                }
+        // Middle
+        rotate([90,0,0]) {
+            move([75,10,0]) cyl(h=hb_width, d=6, chamfer=0.5);
+        }
 
-                // Right strengthener
-                rotate([90,0,0]) {
-                    move([89,-8,0]) cyl(h=hb_width, d=10, chamfer=0.5);
-                }
-            }
+        // Bottom
+        rotate([90,0,0]) {
+            move([45,31,0]) cyl(h=hb_width, d=6, chamfer=0.5);
+        }
+    }
+}
+
+module render_headband(x, y, z, rotang)
+{
+    hb_width = 20;
+    hb_thick = 3;
+
+    color("MediumBlue") move([x - 12, y, z]) {
+        move([0,0,0]) rotate([0,-rotang,0]) {
+            side_part();
+        }
+
+        move([0,0,-75]) rotate([180,rotang,0]) {
+                side_part();
         }
 
         // Upper
+        $fn=30;
         rotate([90,90,0]) {
-            move([38,38,0]) {
-                // 76.5
-                rotate([0,0,30]) rotate_extrude(angle = 120) translate([86, 0, 0]) square(size = [hb_thick + 2, hb_width], center = true);
+            move([37.5,56,0]) {
+                rotate([0,0,10]) rotate_extrude(angle = 160) translate([70, 0, 0]) square(size = [hb_thick + 1, hb_width], center = true);
             }
         }
     }

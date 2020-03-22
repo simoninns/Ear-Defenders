@@ -6,7 +6,7 @@ Fear not, even if you can’t go to the hardware store, you can now 3D print you
 
 All parts are suitable for printing with PETG except the ear-muffs (the bits that sit around the ear) which should be printed in TPU to ensure a soft, silky caress to the sides of your head.
 
-It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation. 
+It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation.  This item should be considered as a novelty to show off your 3D printer rather than a replacement for real ear defenders.
 
 <img src="/images/ear_defenders1.png" width="800">
 
@@ -25,7 +25,7 @@ The OpenSCAD source files provide a parameter interface that allows you to rende
 * Layer: 0.20mm (Quality)
 * Infill: 15%
 * Supports: None
-* Notes: The ear shell should be stuffed with acoustic foam (although just about any soft foam or other material will do).  Simply cut some foam with scissors and push into the ear cups after the ear-muffs have been clipped in place. 
+* Notes: The ear shell should be stuffed with dense acoustic foam (although just about any foam or other material will act to lower ambient sound amplitude).  Simply cut some foam with scissors and push into the ear cups after the ear-muffs have been clipped in place. For additional attenuation of sound glue the ear muffs to the ear shell to form an air tight seal.
 
 <img src="/images/ear_shell.png" width="800">
 
