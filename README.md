@@ -18,6 +18,10 @@ The model has been printed and tested on the Prusa MK3S/MMU2S printer. All parts
 
 The OpenSCAD source files provide a parameter interface that allows you to render either the whole model or the individual parts (placed flat on the axis read for STL (or other 3D format) export).  This requires OpenSCAD 2019.05 or later.
 
+The github repository for the model can be found at https://github.com/simoninns/Ear-Defenders
+
+You may be wondering "do they really work?", well the effectiveness of the ear defenders depends on two things, 1) the quality of the acoustic foam and 2) the quality of the seal around the ears.  Solving 1 is just a case of using the right stuff.  Solving 2 is a bit more difficult; ideally you would use a headband made with spring-steel to increase the lateral pressure on the ear cups, but I wanted to keep it completely 3D printable.  By using thick PETG you can achieve a fairly good amount of pressure, but it's not the ideal material for the job (there's quite a limit to how much it can flex before it breaks).  Simply replacing the headband with a cloth-wrapped spring steel alternative would make the ear defenders every bit as good as the commercial ones.  You could also improve the seal by using softer TPU (or making some foam filled ear-muffs), for the sake of simplicity (and ease of printing) I used 98A TPU; a softer filament would be even better, but they are tricky to print with.
+
 ## Recommended print settings
 ### Ear shell
 * Number required: 2
@@ -57,6 +61,15 @@ The OpenSCAD source files provide a parameter interface that allows you to rende
 * Notes: If you don't have TPU filament available it's possible to print this part in PETG too, only it won't be quite as comfortable (but it still works to isolate your ears); just make sure to increase the infill for other materials.  The ear muffs are designed to clip into the ear cups using the four small clips around the ear-cup (they are designed to be removed easily in case you wish to clean them).
 
 <img src="/images/ear_muff.png" width="800">
+
+## Print time
+Clearly this depends on your printer and it's settings, but I had the following approximate timings:
+
+* Ear shells - 8h45 (2 at the same time)
+* Headband and T-mounts - 4h20 (1 headband, 2 T-mounts)
+* Ear muffs - 7h05 (2 at the same time)
+
+So a total of about 20 hours and 10 minutes.
 
 # Author
 
