@@ -6,7 +6,7 @@ Fear not, even if you can’t go to the hardware store, you can now 3D print you
 
 All parts are suitable for printing with PETG except the ear-muffs (the bits that sit around the ear) which should be printed in TPU to ensure a soft, silky caress to the sides of your head.
 
-It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation.  This item should be considered as a novelty to show off your 3D printer rather than a replacement for real ear defenders.
+It should go without saying that these are not designed or certified for ear protection from heavy machinery, loud explosions or steam-hammers (why on earth would you be doing that at home?) - put them on, use your laptop or read a book in happy isolation from minor noise sources.
 
 <img src="/images/ear_defenders1.png" width="800">
 
@@ -20,7 +20,7 @@ The OpenSCAD source files provide a parameter interface that allows you to rende
 
 The github repository for the model can be found at https://github.com/simoninns/Ear-Defenders
 
-You may be wondering "do they really work?", well the effectiveness of the ear defenders depends on two things, 1) the quality of the acoustic foam and 2) the quality of the seal around the ears.  Solving 1 is just a case of using the right stuff.  Solving 2 is a bit more difficult; ideally you would use a headband made with spring-steel to increase the lateral pressure on the ear cups, but I wanted to keep it completely 3D printable.  By using thick PETG you can achieve a fairly good amount of pressure, but it's not the ideal material for the job (there's quite a limit to how much it can flex before it breaks).  Simply replacing the headband with a cloth-wrapped spring steel alternative would make the ear defenders every bit as good as the commercial ones.  You could also improve the seal by using softer TPU (or making some foam filled ear-muffs), for the sake of simplicity (and ease of printing) I used 98A TPU; a softer filament would be even better, but they are tricky to print with.
+You may be wondering "do they really work?", well the effectiveness of the ear defenders depends on two things, 1) the quality of the acoustic foam and 2) the quality of the seal around the ears.  Solving 1 is just a case of using the right stuff.  Solving 2 is a bit more difficult; ideally you would use a headband made with spring-steel to increase the lateral pressure on the ear cups, but I wanted to keep it completely 3D printable.  By using thick PETG you can achieve a fairly good amount of pressure, but it's not the ideal material for the job (there's quite a limit to how much it can flex before it breaks).  Simply replacing the headband with a cloth-wrapped spring steel alternative would make the ear defenders every bit as good as the commercial ones.  You could also improve the seal by using softer TPU (or making some foam filled ear-muffs). For the sake of simplicity (and ease of printing) I used 98A TPU; a softer filament would be even better, but they are tricky to print with.
 
 ## Recommended print settings
 ### Ear shell
