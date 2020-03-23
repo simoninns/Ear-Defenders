@@ -53,7 +53,7 @@ module t_mount_clip(x, y, z)
         difference() {
             move([-5,-12.25,17]) cuboid([8,24.5,8], chamfer=0.5, center = false);
 
-            move([-6,-10, 18.5]) cuboid([10,20,5], center = false);
+            move([-6,-10.1, 18.3]) cuboid([10,20.2,5.2], center = false);
         }
 
         rotate([-90,0,0]) move([-1,-21,-14]) cyl(l=3, r=2, center=false, chamfer=0.7);
