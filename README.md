@@ -48,7 +48,7 @@ You may be wondering "do they really work?", well the effectiveness of the ear d
 * Material: Prusament PETG (Jet Black)
 * Layer: 0.20mm (Quality)
 * Infill: 25%
-* Supports: Everywhere
+* Supports: None
 
 <img src="/images/headband.png" width="800">
 
