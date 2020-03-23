@@ -39,7 +39,7 @@ You may be wondering "do they really work?", well the effectiveness of the ear d
 * Layer: 0.20mm (Quality)
 * Infill: 25%
 * Supports: None
-* Notes: The T-Mounts are a little smaller in diameter than the hole in the ear shell so should press in firmly (don't use too much force though... Read on...).  If they are loose, use a little glue on the tip of the mount and stick in place (you can remove the ear shell from the headband by simply twisting through 90 degrees).  If the fit is tight, use an 8mm drill bit (just hold it in your hand) and insert into the ear shell hole and twist round and up and down to clear out any unnecessary filament.
+* Notes: The T-Mounts should press in firmly into the holes in the ear shells (don't use too much force though).  If the fit is too tight sand down the sides of the mounting post a little until the mount slides in but is held firmly.  It's best to fit the lower part of the T-mount into the ear shell first, then slide the second part onto the headband before finally snapping the two parts of the mount together.
 
 <img src="/images/t_mount.png" width="800">
 
